@@ -8,6 +8,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'msanders/snipmate.vim'
 Bundle 'vim-perl/vim-perl'
+Bundle 'jnwhiteh/vim-golang'
 
 Bundle 'tpope/vim-vividchalk'
 
@@ -49,9 +50,16 @@ set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swp//
 set backup
 set noswapfile
-" vim: set ft=vim :
 
+syntax enable
 set foldmethod=syntax
 set foldlevelstart=3
 let perl_fold=1
 let perl_extended_vars=1
+
+set laststatus=2
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
+" vim: set ft=vim :
