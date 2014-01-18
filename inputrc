@@ -1,0 +1,8 @@
+set completion-ignore-case on
+set editing-mode vi
+
+$if mode=vi
+	set keymap vi-command
+	"gg": beginning-of-history
+	"G": end-of-history
+
