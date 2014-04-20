@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 mkdir -p ~/.vim/tmp/{backup,swp,tmp}
 mkdir -p ~/.vim/bundle
