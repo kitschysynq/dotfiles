@@ -17,7 +17,11 @@ Plugin 'tpope/vim-vividchalk'
 
 filetype plugin indent on
 set background=dark
-colorscheme vividchalk
+try
+	colorscheme vividchalk
+catch
+	" noop
+endtry
 
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
