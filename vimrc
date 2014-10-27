@@ -38,10 +38,10 @@ set fileencodings=ucs-bom,utf-8,default,latin1
 " set printoptions=paper:letter
 " set ruler
 
-set shiftwidth=8
-set tabstop=8
-set softtabstop=8
 set noexpandtab
+" set shiftwidth=8
+" set tabstop=8
+" set softtabstop=8
 set listchars=tab:»·,eol:$
 set list
 
