@@ -3,15 +3,17 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'msanders/snipmate.vim'
-Bundle 'vim-perl/vim-perl'
-Bundle 'jnwhiteh/vim-golang'
+Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-fugitive'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'vim-perl/vim-perl'
+Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-markdown'
+Plugin 'sukima/asciidoc-vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
-Bundle 'tpope/vim-vividchalk'
+Plugin 'tpope/vim-vividchalk'
 
 filetype plugin indent on
 set background=dark
