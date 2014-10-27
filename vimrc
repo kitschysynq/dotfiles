@@ -73,4 +73,6 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let mapleader=","
+
+au BufReadPost *.adoc set syntax=asciidoc
 " vim: set ft=vim :
