@@ -55,10 +55,13 @@ set backup
 set noswapfile
 
 syntax enable
+set modeline
+set modelines=1
 set foldmethod=syntax
-set foldlevelstart=3
+set foldlevelstart=7
 let perl_fold=1
 let perl_extended_vars=1
+set wildmode=longest
 
 set laststatus=2
 python from powerline.vim import setup as powerline_setup
