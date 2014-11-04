@@ -124,3 +124,4 @@ if ! shopt -oq posix; then
 fi
 
 set -o vi
+export EDITOR=vi
