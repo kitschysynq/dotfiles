@@ -9,9 +9,11 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'vim-perl/vim-perl'
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-markdown'
+Plugin 'quabug/vim-gdscript'
 Plugin 'sukima/asciidoc-vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'vimwiki/vimwiki'
 
 Plugin 'tpope/vim-vividchalk'
 
@@ -51,6 +53,9 @@ set list
 
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set guioptions=aegi
+if has('gui_running')
+	set guifont=Liberation\ Mono\ 10
+endif
 
 set undodir=~/.vim/tmp/undo//
 set backupdir=~/.vim/tmp/backup//
@@ -59,6 +64,7 @@ set backup
 set noswapfile
 
 syntax enable
+syntax reset
 set modeline
 set modelines=1
 set foldmethod=syntax
@@ -66,6 +72,7 @@ set foldlevelstart=7
 let perl_fold=1
 let perl_extended_vars=1
 set wildmode=longest
+set clipboard^=unnamed
 
 set laststatus=2
 python from powerline.vim import setup as powerline_setup
@@ -76,7 +83,16 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+" vim go settings
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
 let mapleader=","
 
 au BufReadPost *.adoc set syntax=asciidoc
 " vim: set ft=vim :
+
+let g:fugitive_github_domains = [ 'https://github.internal.digitalocean.com', 'https://git.kernel.org/pub/scm/virt/kvm/kvm.git' ]
