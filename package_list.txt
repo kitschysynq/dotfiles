@@ -1,0 +1,6 @@
+build-essential
+python-pip
+tmux
+ttf-liberation
+ttf-ancient-fonts
+vim
