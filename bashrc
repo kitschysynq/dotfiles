@@ -127,6 +127,7 @@ set -o vi
 export EDITOR=vi
 
 eval "$(hub alias -s)"
+export POWERLINE_CONFIG_COMMAND=.local/bin/powerline-config
 
 export PATH=$PATH:/usr/local/go/bin:$HOME/code/godev/bin
 export GOPATH=~/code/godev
