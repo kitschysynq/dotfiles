@@ -125,3 +125,19 @@ fi
 
 set -o vi
 export EDITOR=vi
+
+eval "$(hub alias -s)"
+
+export PATH=$PATH:/usr/local/go/bin:$HOME/code/godev/bin
+export GOPATH=~/code/godev
+export GOBIN=~/code/godev/bin
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export CHEF_USER=sswehla
+export PATH="$PATH:/home/thor/terraform"
+
+alias v1="export MASTER=v1-master; export PRODUCTION=v1-production;"
+alias dobe="export MASTER=dm; export PRODUCTION=dp;"
+export DIGITALOCEAN_API_KEY=$(cat ~/.do.token)
+export DIGITALOCEAN_ACCESS_TOKEN=${DIGITALOCEAN_API_KEY}
+export DIGITALOCEAN_SSH_KEY_IDS=""
