@@ -5,15 +5,21 @@ call vundle#rc()
 
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'vim-perl/vim-perl'
 Plugin 'fatih/vim-go'
+Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'quabug/vim-gdscript'
 Plugin 'sukima/asciidoc-vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'vimwiki/vimwiki'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'wlangstroth/vim-racket'
+Plugin 'timburgess/extempore.vim'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Plugin 'tpope/vim-vividchalk'
 
@@ -35,7 +41,7 @@ unlet s:cpo_save
 
 set autoindent
 set cindent
-set smartindent
+set nosmartindent
 
 set fileencodings=ucs-bom,utf-8,default,latin1
 " set helplang=en
@@ -75,9 +81,9 @@ set wildmode=longest
 set clipboard^=unnamed
 
 set laststatus=2
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+" python3 from powerline.vim import setup as powerline_setup
+" python3 powerline_setup()
+" python3 del powerline_setup
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -89,8 +95,11 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_template_autocreate = 0
+let g:go_fmt_autosave = 0
 
 let mapleader=","
+nnoremap <leader>gf :GoFmt<cr>
 
 au BufReadPost *.adoc set syntax=asciidoc
 " vim: set ft=vim :
