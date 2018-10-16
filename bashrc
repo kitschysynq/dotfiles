@@ -39,7 +39,7 @@ if [ "$COLORTERM" == "gnome-terminal" ]; then
         export TERM=xterm-256color
 fi
 
-[ -n "$TMUX" ] && export TERM=screen-256color
+[ -n "$TMUX" ] && export TERM=st-256color
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -47,6 +47,7 @@ case "$TERM" in
     xterm-256color) color_prompt=yes;;
     screen-color) color_prompt=yes;;
     screen-256color) color_prompt=yes;;
+    st-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -127,7 +128,7 @@ set -o vi
 export EDITOR=vi
 
 eval "$(hub alias -s)"
-export POWERLINE_CONFIG_COMMAND=.local/bin/powerline-config
+#export POWERLINE_CONFIG_COMMAND=.local/bin/powerline-config
 
 export PATH=$PATH:/usr/local/go/bin:$HOME/code/godev/bin
 export GOPATH=~/code/godev
@@ -137,8 +138,11 @@ eval "$(rbenv init -)"
 export CHEF_USER=sswehla
 export PATH="$PATH:/home/thor/terraform"
 
-alias v1="export MASTER=v1-master; export PRODUCTION=v1-production;"
-alias dobe="export MASTER=dm; export PRODUCTION=dp;"
 export DIGITALOCEAN_API_KEY=$(cat ~/.do.token)
 export DIGITALOCEAN_ACCESS_TOKEN=${DIGITALOCEAN_API_KEY}
-export DIGITALOCEAN_SSH_KEY_IDS=""
+
+# Enable aliases for fasd
+eval "$(fasd --init auto)"
+
+# Enable direnv
+eval "$(direnv hook bash)"
